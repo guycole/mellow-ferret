@@ -5,8 +5,6 @@
 # Author:Guy Cole (guycole at gmail dot com)
 #
 import logging
-import sys
-import yaml
 
 class Bc780:
     def __init__(self, logger_level: int, configuration: dict):
