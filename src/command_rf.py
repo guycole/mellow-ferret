@@ -1,19 +1,17 @@
 #
-# Title:bc780.py
-# Description: bc780 state
+# Title:command_rf.py
+# Description: command
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
 import logging
 
-class Bc780:
+class CommandRf:
     def __init__(self):
         self.logger = logging.getLogger()
 
-        self.version_revision = "VR1.00\r"
-
-    def execute(self, command:str):
-        pass
+    def execute(self, command, bc780):
+        self.logger.info(f"command:{command}")
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***

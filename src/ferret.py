@@ -8,6 +8,9 @@ import logging
 import sys
 import yaml
 
+from bc780 import Bc780
+from dispatcher import Dispatcher
+
 class Ferret:
     def __init__(self, logger_level: int, configuration: dict):
         logging.basicConfig(format="%(asctime)s %(message)s", level=logger_level)
@@ -22,7 +25,9 @@ class Ferret:
         self.installation = configuration["installationId"]
 
     def execute(self):
-        print("run run")
+        bc780 = Bc780()
+        dispatcher = Dispatcher()
+        print(dispatcher.execute('VR', bc780))
 
 print("start")
 
