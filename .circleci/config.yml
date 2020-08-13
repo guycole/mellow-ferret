@@ -12,6 +12,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          environment:
+            PYTHONPATH: ~/mellow-ferret/src
           command: pytest
           name: Test
 
