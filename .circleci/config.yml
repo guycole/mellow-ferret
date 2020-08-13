@@ -12,8 +12,10 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: PYTHONPATH=~/src; export PYTHONPATH; pwd;ls $PYTHONPATH;printenv;python -m pytest
+          command: PYTHONPATH=~/project/src; export PYTHONPATH; pwd;ls $PYTHONPATH;printenv;python -m pytest
           name: Test
+
+#  /home/circleci/project
 
 workflows:
   main:
