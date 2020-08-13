@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: PYTHONPATH=~/mellow-ferret/src python -m pytest
+          command: PYTHONPATH=~/mellow-ferret/src pwd;printenv;python -m pytest
           name: Test
 
 workflows:
