@@ -1,25 +1,19 @@
 version: 2.1
 
+orbs:
+  python: circleci/python@0.3.2
+
 jobs:
   build-and-test:
-    working_directory: ~/mellow-ferret
-
-    docker:
-      - image: circleci/python:3.8.2
-        environment:
-          BOGUS: YADDA
-
+    executor: python/default
     steps:
       - checkout
       - python/load-cache
       - python/install-deps
       - python/save-cache
       - run:
-          command: pytest
+          command: PYTHONPATH=~/mellow-ferret/src python -m pytest
           name: Test
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
 
 workflows:
   main:
