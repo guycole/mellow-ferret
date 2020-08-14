@@ -1,6 +1,6 @@
 #
 # Title:ferret.py
-# Description: 
+# Description:
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
@@ -10,6 +10,7 @@ import yaml
 
 from bc780 import Bc780
 from dispatcher import Dispatcher
+
 
 class Ferret:
     def __init__(self, logger_level: int, configuration: dict):
@@ -27,7 +28,12 @@ class Ferret:
     def execute(self):
         bc780 = Bc780()
         dispatcher = Dispatcher()
-        print(dispatcher.execute('VR', bc780))
+        print(dispatcher.execute("SI", bc780))
+        print(dispatcher.execute("VR", bc780))
+        print(dispatcher.execute("RF", bc780))
+        print(dispatcher.execute("RF1234568", bc780))
+        print(dispatcher.execute("RF1234568?", bc780))
+
 
 print("start")
 

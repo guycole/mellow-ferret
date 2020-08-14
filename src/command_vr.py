@@ -6,12 +6,14 @@
 #
 import logging
 
+
 class CommandVr:
     def __init__(self):
         self.logger = logging.getLogger()
 
     def execute(self, command, bc780):
         return bc780.version_revision
+
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***

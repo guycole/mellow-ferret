@@ -6,12 +6,14 @@
 #
 import logging
 
+
 class CommandSi:
     def __init__(self):
         self.logger = logging.getLogger()
 
     def execute(self, command, bc780):
         return bc780.system_information
+
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***
