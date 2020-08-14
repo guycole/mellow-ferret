@@ -1,6 +1,6 @@
 #
 # Title:command_vr.py
-# Description: return version revision
+# Description: issue 60 VR command
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #

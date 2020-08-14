@@ -1,6 +1,6 @@
 #
 # Title:command_si.py
-# Description: return system information
+# Description: issue 50 SI command
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
