@@ -12,7 +12,7 @@ def test_command_si():
     bc780 = Bc780()
     dispatcher = Dispatcher()
     result = dispatcher.execute("SI", bc780)
-    assert result == bc780.version_revision
+    assert result == bc780.system_information
 
 
 # ;;; Local Variables: ***

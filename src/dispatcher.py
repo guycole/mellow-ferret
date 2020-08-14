@@ -7,6 +7,7 @@
 import logging
 
 from command_rf import CommandRf
+from command_si import CommandSi
 from command_vr import CommandVr
 
 class Dispatcher:
@@ -153,7 +154,8 @@ class Dispatcher:
             pass
         elif command.startswith('SI'):
             # SI = System Information
-            pass
+            command_si = CommandSi()
+            return command_si.execute(command, bc780)
         elif command.startswith('SQ'):
             # SQ = Squelch Query
             pass

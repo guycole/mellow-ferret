@@ -1,20 +1,17 @@
 #
-# Title:bc780.py
-# Description: bc780 state
+# Title:command_si.py
+# Description: return system information
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
 import logging
 
-class Bc780:
+class CommandSi:
     def __init__(self):
         self.logger = logging.getLogger()
 
-        self.system_information = "SI BC245XLT,000000228,102\r"
-        self.version_revision = "VR1.00\r"
-
-    def execute(self, command:str):
-        pass
+    def execute(self, command, bc780):
+        return bc780.system_information
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***
