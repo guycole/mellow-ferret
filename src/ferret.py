@@ -10,7 +10,7 @@ import yaml
 
 from bc780 import Bc780
 from dispatcher import Dispatcher
-
+from gui import FerretGui
 
 class Ferret:
     def __init__(self, logger_level: int, configuration: dict):
@@ -23,16 +23,23 @@ class Ferret:
         self.logger.error("error level message")
         self.logger.critical("critical level message")
 
+        self.gui_enable = configuration["gui_enable"]
         self.installation = configuration["installationId"]
 
     def execute(self):
         bc780 = Bc780()
         dispatcher = Dispatcher()
-        print(dispatcher.execute("SI", bc780))
-        print(dispatcher.execute("VR", bc780))
-        print(dispatcher.execute("RF", bc780))
-        print(dispatcher.execute("RF1234568", bc780))
-        print(dispatcher.execute("RF1234568?", bc780))
+
+        if self.gui_enable is True:
+            gui = FerretGui()
+            gui.execute()
+        else:
+            print(dispatcher.execute("SI", bc780))
+
+#        print(dispatcher.execute("VR", bc780))
+#        print(dispatcher.execute("RF", bc780))
+#        print(dispatcher.execute("RF1234568", bc780))
+#        print(dispatcher.execute("RF1234568?", bc780))
 
 
 print("start")
