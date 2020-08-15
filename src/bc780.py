@@ -17,7 +17,7 @@ class Bc780:
         self.empty = ""
         self.ng = "NG"
         self.ok = "OK"
-        self.system_information = "SI BC245XLT,000000228,102"
+        self.system_information = "SI BC780XLT,000000000,103"
         self.version_revision = "VR1.00"
 
     def set_frequency(self, candidate, memory_flag):

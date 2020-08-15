@@ -8,6 +8,7 @@
 #PATH=/bin:/usr/bin:/etc:/usr/local/bin; export PATH
 #
 export PYTHONPATH=$HOME/IdeaProjects/mellow-ferret/src
+export PYTHONPATH=$HOME/github/mellow-ferret/src
 #echo $PYTHONPATH
 #
 source ./src/venv/bin/activate
