@@ -6,11 +6,13 @@
 #
 import logging
 
+from bc780 import Bc780
+
 class CommandVr:
     def __init__(self):
         self.logger = logging.getLogger()
 
-    def execute(self, command, bc780):
+    def execute(self, command:str, bc780:Bc780):
         return bc780.version_revision
 
 # ;;; Local Variables: ***

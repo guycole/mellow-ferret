@@ -6,13 +6,18 @@
 #
 import logging
 
+from bc780 import Bc780
+
 class CommandRf:
     def __init__(self):
         self.logger = logging.getLogger()
 
-    def execute(self, command, bc780):
+    def execute(self, command:str, bc780:Bc780):
         self.logger.info(f"command:{command}")
-        self.bc780.tune_receiver(123)
+        
+        # TODO parse frequency
+
+        bc780.tune_receiver(0)
         return bc780.ok
 
 # ;;; Local Variables: ***

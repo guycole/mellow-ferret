@@ -6,11 +6,13 @@
 #
 import logging
 
+from bc780 import Bc780
+
 class CommandCb:
     def __init__(self):
         self.logger = logging.getLogger()
 
-    def execute(self, command, bc780):
+    def execute(self, command:str, bc780:Bc780):
         self.logger.info(f"command:{command}")
         return "CB\r"
 

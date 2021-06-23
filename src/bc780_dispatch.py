@@ -6,6 +6,8 @@
 #
 import logging
 
+from bc780 import Bc780
+
 from command_cb import CommandCb
 from command_rf import CommandRf
 from command_vr import CommandVr
@@ -14,7 +16,7 @@ class Bc780Dispatch:
     def __init__(self):
         self.logger = logging.getLogger()
 
-    def execute(self, command, bc780):
+    def execute(self, command:str, bc780:Bc780):
         self.logger.info(f"command:{command}")
 
         if command.startswith('AC'):
@@ -137,7 +139,8 @@ class Bc780Dispatch:
             pass
         elif command.startswith('RF'):
             # RF = Receiver Frequency
-            pass
+            command_rf = CommandRf()
+            return command_rf.execute(command, bc780)
         elif command.startswith('RG'):
             # RG = Radio ID Group
             pass
