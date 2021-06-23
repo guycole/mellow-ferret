@@ -1,6 +1,6 @@
 #
 # Title:ferret.py
-# Description: 
+# Description: main driver for mellow ferret
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
@@ -9,7 +9,7 @@ import sys
 import yaml
 
 from bc780 import Bc780
-from dispatcher import Dispatcher
+from bc780_dispatch import Bc780Dispatch
 
 class Ferret:
     def __init__(self, logger_level: int, configuration: dict):
@@ -22,12 +22,16 @@ class Ferret:
         self.logger.error("error level message")
         self.logger.critical("critical level message")
 
+        self.commands = configuration['commands']
         self.installation = configuration["installationId"]
 
+        self.bc780 = Bc780(self.installation)
+        self.dispatch = Bc780Dispatch()
+
     def execute(self):
-        bc780 = Bc780()
-        dispatcher = Dispatcher()
-        print(dispatcher.execute('VR', bc780))
+        for command in self.commands:
+            result = self.dispatch.execute(command, self.bc780)
+            print(f"{command}:{result}")
 
 print("start")
 
@@ -36,13 +40,13 @@ print("start")
 #
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        file_name = sys.argv[1]
+        config_file_name = sys.argv[1]
     else:
-        file_name = "config.yaml"
+        config_file_name = "config.yaml"
 
     logging_level = logging.DEBUG
 
-    with open(file_name, "r") as infile:
+    with open(config_file_name, "r") as infile:
         try:
             ferret = Ferret(logging_level, yaml.load(infile, Loader=yaml.FullLoader))
             ferret.execute()

@@ -1,19 +1,18 @@
 #
-# Title:command_rf.py
-# Description: tune receiver but not store frequency
+# Title:command_cb.py
+# Description: command
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
 import logging
 
-class CommandRf:
+class CommandCb:
     def __init__(self):
         self.logger = logging.getLogger()
 
     def execute(self, command, bc780):
         self.logger.info(f"command:{command}")
-        self.bc780.tune_receiver(123)
-        return bc780.ok
+        return "CB\r"
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***

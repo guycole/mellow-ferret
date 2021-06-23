@@ -1,15 +1,16 @@
 #
-# Title:dispatcher.py
+# Title:bc780_dispatch.py
 # Description: command dispatch
 # Development Environment:Ubuntu 18/Python 3.6.9
 # Author:Guy Cole (guycole at gmail dot com)
 #
 import logging
 
+from command_cb import CommandCb
 from command_rf import CommandRf
 from command_vr import CommandVr
 
-class Dispatcher:
+class Bc780Dispatch:
     def __init__(self):
         self.logger = logging.getLogger()
 
@@ -42,7 +43,8 @@ class Dispatcher:
             pass
         elif command.startswith('CB'):
             # CB = Choose Active Banks
-            pass
+            command_cb = CommandCb()
+            return command_cb.execute(command, bc780)
         elif command.startswith('CC'):
             # CC = Test CTCSS Decode
             pass

@@ -7,13 +7,15 @@
 import logging
 
 class Bc780:
-    def __init__(self):
+    def __init__(self, installation_id:str):
         self.logger = logging.getLogger()
 
+        self.installation_id = installation_id
+        self.ok = "OK\r"
         self.version_revision = "VR1.00\r"
 
-    def execute(self, command:str):
-        pass
+    def tune_receiver(self, frequency:int):
+        self.logger.info(f"tune_receiver:{frequency}")
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***
