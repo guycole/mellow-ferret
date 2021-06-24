@@ -8,5 +8,7 @@ commands:
   # print version
   - VR
   # 
-  - RF:108M
+  - RF108M
+  #
+  - MD00
   #

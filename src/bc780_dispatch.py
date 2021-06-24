@@ -9,6 +9,7 @@ import logging
 from bc780 import Bc780
 
 from command_cb import CommandCb
+from command_md import CommandMd
 from command_rf import CommandRf
 from command_vr import CommandVr
 
@@ -118,7 +119,8 @@ class Bc780Dispatch:
             pass
         elif command.startswith('MD'):
             # MD = Mode
-            pass
+            command_md = CommandMd()
+            return command_md.execute(command, bc780)
         elif command.startswith('MU'):
             # MU = Mute
             pass
