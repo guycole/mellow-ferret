@@ -8,6 +8,7 @@ import logging
 
 from bc780 import Bc780
 
+from command_at import CommandAt
 from command_cb import CommandCb
 from command_md import CommandMd
 from command_rf import CommandRf
@@ -34,6 +35,8 @@ class Bc780Dispatch:
             pass
         elif command.startswith('AT'):
             # AT = Attenuator Function
+            command_at = CommandAt()
+            return command_at.execute(command, bc780)
             pass
         elif command.startswith('BA'):
             # BA = Channel Beep Alert

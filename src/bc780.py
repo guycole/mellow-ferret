@@ -12,7 +12,11 @@ class Bc780:
 
         self.installation_id = installation_id
         self.ok = "OK\r"
+        self.rf_attenuator = 0
         self.version_revision = "VR1.00\r"
+
+    def rf_attenuator(self, arg:int):
+        self.logger.info(f"rf_attenuator:{arg}")
 
     def tune_receiver(self, frequency:int):
         self.logger.info(f"tune_receiver:{frequency}")
