@@ -13,3 +13,6 @@ commands:
   - MD00
   #
   - AT
+  #
+  - RM 
+  #

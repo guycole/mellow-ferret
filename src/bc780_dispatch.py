@@ -12,6 +12,7 @@ from command_at import CommandAt
 from command_cb import CommandCb
 from command_md import CommandMd
 from command_rf import CommandRf
+from command_rm import CommandRm
 from command_vr import CommandVr
 
 class Bc780Dispatch:
@@ -154,7 +155,8 @@ class Bc780Dispatch:
             pass
         elif command.startswith('RM'):
             # RM = Receiver Modulation
-            pass
+            command_rm = CommandRm()
+            return command_rm.execute(command, bc780)
         elif command.startswith('SB'):
             # SB = Select Banks
             pass
