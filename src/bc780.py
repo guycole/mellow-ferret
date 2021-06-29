@@ -10,6 +10,7 @@ class Bc780:
     def __init__(self, installation_id:str):
         self.logger = logging.getLogger()
 
+        self.frequency = 0
         self.installation_id = installation_id
         self.ok = "OK\r"
         self.rf_attenuator = 0
