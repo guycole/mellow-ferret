@@ -14,6 +14,7 @@ class Bc780:
         self.installation_id = installation_id
         self.ok = "OK\r"
         self.rf_attenuator = 0
+        self.system_information = "SI BC245XLT,000000228,102\r"
         self.version_revision = "VR1.00\r"
 
     def rf_attenuator(self, arg:int):

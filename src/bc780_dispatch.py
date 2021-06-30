@@ -165,7 +165,8 @@ class Bc780Dispatch:
             pass
         elif command.startswith('SI'):
             # SI = System Information
-            pass
+            command_si = CommandSi()
+            return command_si.execute(command, bc780)
         elif command.startswith('SQ'):
             # SQ = Squelch Query
             pass

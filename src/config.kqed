@@ -8,7 +8,7 @@ commands:
   # memory clear
   - AC
   # print version
-  - VR
+  - VR 
   # tune to KQED
   - RF88.5M
   #

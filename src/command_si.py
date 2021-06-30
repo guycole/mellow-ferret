@@ -8,13 +8,13 @@ import logging
 
 from bc780 import Bc780
 
-class CommandSg:
+class CommandSi:
     def __init__(self):
         self.logger = logging.getLogger()
 
     def execute(self, command:str, bc780:Bc780):
         self.logger.info(f"command:{command}")
-        return "SI\r"
+        return bc780.system_information
 
 # ;;; Local Variables: ***
 # ;;; mode:python ***
