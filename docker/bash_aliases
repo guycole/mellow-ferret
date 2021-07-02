@@ -1,0 +1,41 @@
+# 
+PS1="\u@\h:\!>"
+#
+EDITOR=vi; export EDITOR
+#
+HISTSIZE=100; export HISTSIZE
+HISTFILE=/tmp/gsc.hist; export HISTFILE
+#
+PATH=/usr/local/bin:$HOME/local/bin:$PATH; export PATH
+LD_LIBRARY_PATH=/usr/local/lib; export LD_LIBRARY_PATH
+#
+# PostGres
+#PATH=$PATH:/usr/local/opt/postgresql@9.6/bin;export PATH
+#
+# Amazon
+PATH=$PATH:$HOME/Library/Python/3.7/bin;export PATH
+#AWS_ACCESS_KEY_ID="bogus"; export AWS_ACCESS_KEY_ID
+#AWS_SECRET_ACCESS_KEY="bogus"; export AWS_SECRET_ACCESS_KEY
+#
+alias ls='ls -FC'
+alias ll='ls -la'
+alias lg='ls -lg'
+alias dirz="ls -la | grep '^d'"
+#
+alias pscript="ps -ef | grep script"
+#
+alias topo="top -o cpu"
+#
+alias cdf="cd ~/git/feisty"
+#
+alias gpgd="gpg --decrypt test.gpg"
+alias gpge="gpg --armor --sign --encrypt "
+alias gpgkeyx="gpg --armor --export guycole"
+alias gpglist="gpg --list-keys"
+alias gpgsign="gpg --output sign.gpg --sign source.txt"
+alias gpgclear="gpg --clearsign source.txt"
+#
+alias ping8="ping -c 5 8.8.8.8"
+#
+alias cyclops='cd /Users/gsc/IdeaProjects/daring-cyclops-aws'
+##################################################################
