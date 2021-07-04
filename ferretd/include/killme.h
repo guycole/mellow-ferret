@@ -2,7 +2,7 @@
 ** Title:bc780.h
 **
 ** Description:
-**   Emulate BC780 state
+**   BC780 operations
 **
 ** Development Environment:
 **   Ubuntu 18.04.3 LTS (Bionic Beaver)
@@ -16,11 +16,13 @@
 #ifndef BC780_H_
 #define BC780_H_
 
-class Bc780 {
-    char *installation;
+class xBc780 {
+    std::string installationId;
 
     public:
-        Bc780();
+        xBc780(const std::string id) {installationId = id;}
+
+        //std::string get_id() {return installationId;}
 };
 
 #endif

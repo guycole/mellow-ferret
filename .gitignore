@@ -28,4 +28,9 @@
 *.out
 *.app
 
-build/*
+ferretc/build/*
+ferretd/build/*
+ferretdlib/build/*
+ferretdtest/build/*
+
+.vscode

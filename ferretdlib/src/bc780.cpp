@@ -15,6 +15,8 @@
 
 #include<iostream>
 
-Bc780::Bc780() {
+/*
+Bc780::Bc780(const std::string arg) {
     std::cout << "bc780" << std::endl;
 }
+*/
