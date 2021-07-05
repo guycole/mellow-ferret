@@ -2,7 +2,7 @@
 ** Title:run_mode.cpp
 **
 ** Description:
-**   Emulate BC780 state
+**   test run mode
 **
 ** Development Environment:
 **   Ubuntu 18.04.3 LTS (Bionic Beaver)
@@ -11,10 +11,13 @@
 ** Author:
 **   G.S. Cole (guycole at gmail dot com)
 */
+#include "gtest/gtest.h"
+
 #include "run_mode.h"
 
-/*
-void RunMode::set_mode(ModeType arg) {
-    mode = arg;
+// test suite, test name
+TEST(SomeTestSuite, SomeTest) {
+    RunMode *obj = new RunMode();
+    obj->set_mode(ModeType::kManual);
+    ASSERT_EQ(obj->get_mode(), ModeType::kManual);
 }
-*/

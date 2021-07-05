@@ -25,7 +25,9 @@ class RunMode {
         RunMode() {}
         ~RunMode() {}
 
-        void set_mode(ModeType arg);
+        ModeType get_mode() {return mode;}
+
+        void set_mode(ModeType arg) {mode = arg;}
 };
 
 #endif

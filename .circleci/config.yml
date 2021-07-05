@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Setup gtest child repo
           command: |
-            cd third_party
+            cd ferretdlib
             git submodule init
             git submodule update 
       - run:
@@ -36,7 +36,7 @@ jobs:
           name: Execute Tests
           command: |
             cd build
-            ./tests --gtest_output=XML
+            ./gtestbin --gtest_output=XML
       - store_test_results:
           path: build
 
