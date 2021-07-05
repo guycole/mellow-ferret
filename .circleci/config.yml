@@ -11,11 +11,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Setup gtest child repo
+          name: setup gtest child repo
           command: |
-            cd ferretdlib
+            cd ferretdlib/googletest
             git submodule init
-            git submodule update 
+            git submodule update
       - run:
           name: setup cmake and build artifacts
           command: |
@@ -42,8 +42,7 @@ jobs:
 
   workflows:
     version: 2
-
-    workflow:
+    build-and-test:
       jobs:
         - build
         - test:
