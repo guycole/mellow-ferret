@@ -17,7 +17,7 @@ jobs:
             git submodule init
             git submodule update 
       - run:
-          name: Setup cmake and build artifacts
+          name: setup cmake and build artifacts
           command: |
             mkdir build
             cd build
@@ -33,7 +33,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: Execute Tests
+          name: execute tests
           command: |
             cd build
             ./gtestbin --gtest_output=XML
@@ -42,7 +42,8 @@ jobs:
 
   workflows:
     version: 2
-    build-and-test:
+
+    workflow:
       jobs:
         - build
         - test:
