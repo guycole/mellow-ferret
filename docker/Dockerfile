@@ -12,17 +12,9 @@ LABEL maintainer="guycole@gmail.com"
 #
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
 #
-#RUN apt-get install -y python3 
-#RUN apt-get install -y python3-pip 
-#RUN apt-get install -y virtualenv
-#RUN pip3 install --upgrade pip
-#
 RUN apt-get install -y curl
 RUN apt-get install -y git 
 RUN apt-get install -y less
-#RUN apt-get install -y inetutils-tools inetutils-ping inetutils-telnet
-#RUN apt-get install -y netcat
-#RUN apt-get install -y net-tools
 RUN apt-get install -y vim
 RUN apt-get install -y wget
 #
@@ -30,7 +22,6 @@ RUN apt-get install -y cmake
 RUN apt-get install -y doxygen
 RUN apt-get install -y build-essential
 RUN apt-get install -y libusb-1.0-0-dev
-#RUN apt-get install -y postgresql-client
 #
 RUN apt-cache pkgnames | sort > pkg.names
 #
