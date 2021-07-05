@@ -11,18 +11,24 @@
 ** Author:
 **   G.S. Cole (guycole at gmail dot com)
 */
-#include <string>
-
 #ifndef BC780_H_
 #define BC780_H_
 
+#include <string>
+
+#include "run_mode.h"
+
 class Bc780 {
-    std::string installationId;
+    std::string installation_id;
 
+    RunMode run_mode;
+ 
     public:
-        Bc780(const std::string id) {installationId = id;}
+        Bc780(const std::string id);
 
-        std::string get_id() {return installationId;}
+        std::string get_id() {return installation_id;}
+
+        RunMode get_run_mode() {return run_mode;}
 };
 
 #endif

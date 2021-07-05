@@ -3,7 +3,7 @@
 #
 cmake_minimum_required(VERSION 3.10.2)
 
-set(PROJ_NAME "ferretdlib")
+set(PROJ_NAME "ferretd")
 project(${PROJ_NAME})
 
 # Debug, Release, RelWithDebInfo
@@ -17,6 +17,6 @@ include_directories("include")
 file(GLOB SOURCES "src/*.cpp")
 
 # SHARED, STATIC or MODULE
-add_library(ferretd STATIC ${SOURCES})
+add_library(${PROJ_NAME} STATIC ${SOURCES})
 
 #install(TARGETS ferretd DESTINATION /usr/local/lib)

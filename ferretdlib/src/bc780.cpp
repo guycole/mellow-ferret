@@ -13,10 +13,16 @@
 */
 #include "bc780.h"
 
-#include<iostream>
+#include <assert.h>
+#include <iostream>
 
-/*
-Bc780::Bc780(const std::string arg) {
-    std::cout << "bc780" << std::endl;
+Bc780::Bc780(const std::string id) {
+    assert(id.empty() == false);
+
+    std::cout << "bc780 " << id << std::endl;
+    
+    installation_id = id;
+
+//    runMode = ModeType::kManual;
+//    frequency = 88500000;
 }
-*/

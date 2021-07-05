@@ -8,10 +8,13 @@ Still a work in progress, visit later and hopefully I will have more to share.
 This project will eventually be distributed as a yocto image for raspberry pi.
 
 ## Credits (and thank you)
-The following projects are used by mellow-ferret.  Thank you for enabling my project.
+The following projects/services are used by mellow-ferret.  Thank you for enabling my project.
 
-* [boost](https://github.com/boostorg) 
-* [circleci](https://circleci.com)
-* [cmake](https://cmake.org)
-* [google test](https://google.github.io/googletest)
+* [Boost](https://github.com/boostorg) 
+* [CircleCi](https://circleci.com)
+* [CMake](https://cmake.org)
+* [Doxygen](https://www.doxygen.nl)
+* [Free Software Foundation](https://www.fsf.org)
+* [GoogleTest](https://google.github.io/googletest)
+* [GitHub](https://github.com)
 * [librtlsdr](https://github.com/steve-m/librtlsdr)
