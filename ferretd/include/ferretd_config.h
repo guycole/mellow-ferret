@@ -1,8 +1,9 @@
 /*
-** Title:run_mode.cpp
+** Title:ferretd_config.h.in
 **
 ** Description:
-**   Emulate BC780 state
+**   mellow ferret (ferretd) configuration
+**   values defined in CMakeLists.txt
 **
 ** Development Environment:
 **   Ubuntu 18.04.3 LTS (Bionic Beaver)
@@ -11,10 +12,5 @@
 ** Author:
 **   G.S. Cole (guycole at gmail dot com)
 */
-#include "run_mode.h"
-
-/*
-void RunMode::set_mode(ModeType arg) {
-    mode = arg;
-}
-*/
+#define FERRETD_VERSION_MAJOR 0
+#define FERRETD_VERSION_MINOR 0

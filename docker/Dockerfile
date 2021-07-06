@@ -15,12 +15,15 @@ RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
 RUN apt-get install -y curl
 RUN apt-get install -y git 
 RUN apt-get install -y less
+RUN apt-get install -y inetutils-tools inetutils-ping
 RUN apt-get install -y vim
 RUN apt-get install -y wget
 #
+RUN apt-get install -y build-essential
+RUN apt-get install -y clang clang-tidy
 RUN apt-get install -y cmake
 RUN apt-get install -y doxygen
-RUN apt-get install -y build-essential
+#
 RUN apt-get install -y libusb-1.0-0-dev
 #
 RUN apt-cache pkgnames | sort > pkg.names

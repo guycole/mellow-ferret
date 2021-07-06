@@ -1,5 +1,5 @@
 /*
-** Title:run_mode.cpp
+** Title:run_mode.cc
 **
 ** Description:
 **   test run mode

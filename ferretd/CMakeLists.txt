@@ -9,18 +9,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(PROJ_NAME "ferretd")
-project(${PROJ_NAME})
+project(${PROJ_NAME} VERSION 0.0)
+configure_file(ferretd_config.h.in ../include/ferretd_config.h)
+set(CMAKE_BUILD_TYPE Debug) # Debug, Release, RelWithDebInfo
 
-# Debug, Release, RelWithDebInfo
-set(CMAKE_BUILD_TYPE Debug)
+include_directories("include")
+
+file(GLOB SOURCES "src/*.cc")
+
+add_executable(${PROJ_NAME} ${SOURCES})
+
+include_directories(~/Documents/github/mellow-ferret/ferretdlib/include)
 
 set(PROJECT_LINK_LIBS libferretd.a)
 link_directories(~/Documents/github/mellow-ferret/ferretdlib/build)
-
-include_directories("include")
-include_directories(~/Documents/github/mellow-ferret/ferretdlib/include)
-
-file(GLOB SOURCES "src/*.cpp")
-
-add_executable(${PROJ_NAME} ${SOURCES})
-target_link_libraries(${PROJ_NAME} ${PROJECT_LINK_LIBS})

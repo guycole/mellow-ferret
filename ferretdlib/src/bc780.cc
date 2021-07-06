@@ -1,5 +1,5 @@
 /*
-** Title:bc780.cpp
+** Title:bc780.cc
 **
 ** Description:
 **   Emulate BC780 state

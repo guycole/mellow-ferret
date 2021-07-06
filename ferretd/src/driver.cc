@@ -1,8 +1,9 @@
 /*
 ** Title:
-**   driver.cpp
+**   driver.cc
 **
 ** Description:
+**   start ferretd
 **
 ** Development Environment:
 **   Ubuntu 18.04.3 LTS (Bionic Beaver)
@@ -13,13 +14,15 @@
 */
 #include<iostream>
 
-#include "bc780.h"
+//include "bc780.h"
 
 int main(int argc, char *argv[]) {
    std::cout << "ferret driver" << std::endl;
 
+/*
    Bc780 bc780("testaroo");
    std::cout << bc780.get_id() << std::endl;
+*/
 
    return 0;
 }

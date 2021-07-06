@@ -26,8 +26,6 @@ alias pscript="ps -ef | grep script"
 #
 alias topo="top -o cpu"
 #
-alias cdf="cd ~/git/feisty"
-#
 alias gpgd="gpg --decrypt test.gpg"
 alias gpge="gpg --armor --sign --encrypt "
 alias gpgkeyx="gpg --armor --export guycole"
@@ -37,5 +35,5 @@ alias gpgclear="gpg --clearsign source.txt"
 #
 alias ping8="ping -c 5 8.8.8.8"
 #
-alias cyclops='cd /Users/gsc/IdeaProjects/daring-cyclops-aws'
-##################################################################
+alias ferret='cd ~/github/mellow-ferret'
+#

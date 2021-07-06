@@ -12,6 +12,7 @@ The following projects/services are used by mellow-ferret.  Thank you for enabli
 
 * [Boost](https://github.com/boostorg) 
 * [CircleCi](https://circleci.com)
+* [Clang](https://clang.llvm.org)
 * [CMake](https://cmake.org)
 * [Doxygen](https://www.doxygen.nl)
 * [Free Software Foundation](https://www.fsf.org)
