@@ -17,7 +17,23 @@ include_directories("include")
 
 file(GLOB SOURCES "src/*.cc")
 
-add_executable(${PROJ_NAME} ${SOURCES})
+# add_executable(${PROJ_NAME} ${SOURCES})
+
+############
+set(Boost_USE_STATIC_LIBS OFF) 
+set(Boost_USE_MULTITHREADED ON)  
+set(Boost_USE_STATIC_RUNTIME OFF) 
+find_package(Boost 1.75.0 COMPONENTS date_time filesystem log system) 
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS}) 
+    add_executable(${PROJ_NAME} ${SOURCES})
+    target_link_libraries(${PROJ_NAME} ${Boost_LIBRARIES})
+#    add_executable(progname file1.cxx file2.cxx) 
+#    target_link_libraries(progname ${Boost_LIBRARIES})
+endif()
+
+############
 
 #include_directories(~/Documents/github/mellow-ferret/ferretdlib/include)
 #set(PROJECT_LINK_LIBS libferretd.a)
